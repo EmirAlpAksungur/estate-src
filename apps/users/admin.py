@@ -27,7 +27,7 @@ class UserAdmin(BaseUserAdmin):
             },
         ),
         (
-            _("Permissions adn Groups"),
+            _("Permissions and Groups"),
             {
                 "fields":(
                     "is_active",
@@ -41,7 +41,7 @@ class UserAdmin(BaseUserAdmin):
         (
             _("Important Dates"),
             {
-                "fields":("username","last_login","date_joined",),
+                "fields":("last_login","date_joined",),
             },
         ),
     )
@@ -56,4 +56,4 @@ class UserAdmin(BaseUserAdmin):
     )
     search_fields = ["email","username","first_name","last_name"]
     
-    admin.site.register(User, BaseUserAdmin)
+admin.site.register(User, UserAdmin)
